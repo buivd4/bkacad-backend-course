@@ -1,6 +1,7 @@
 public class Lec03Example {
     public static void main(String[] args) {
-        int b[]= {1,2,3};
+        String b= new String();
+        b="Hello";
         System.out.println(b.indexOf('o'));
     }
 }
