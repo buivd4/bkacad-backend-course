@@ -30,7 +30,7 @@ Nhập vào phần tử thứ 1 của mảng con thứ 2: 543
 Nhập vào phần tử thứ 2 của mảng con thứ 2: 23
 ---
 Kết quả:
-10  213   232
-1241  34  54
-1242  543  23
+mảng 1 [10_213_232] \n
+mảng 2 [1241_34_54] \n
+mảng 3 [1242_543_23] \n
 ```
