@@ -34,6 +34,28 @@ public class Lec05Prac01 {
         }
         return viTri;
     }
+
+    private static boolean isPrime(long num){
+        if ((num<2)||(num%2==0)) return false;
+        if (num==2) return true;
+        for (int i=3; i<=Math.sqrt(num); i+=2){
+            if (num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static long sumOfPrimes(long[] arr){
+        long tong=0;
+        for (int i=0;i<arr.length;i+=1){
+            if (isPrime(arr[i])){
+                tong+=arr[i];
+            }
+            // Hoac tong+=isPrime(arr[i])?arr[i]:0;
+        }
+        return tong;
+    }
     public static void main(String[] args) {
         int MAX=40;
         int N=10;
@@ -42,5 +64,6 @@ public class Lec05Prac01 {
         System.out.printf("Giá trị lớn nhất của mảng là: %d\n", findMaxValue(mang));
         int viTriMin=findMinValuePosition(mang);
         System.out.printf("Giá trị nhỏ nhất của mảng là: %d tại vị trí: %d\n", mang[viTriMin], viTriMin);
+        System.out.printf("Tổng các số nguyên tố trong mảng là: %d\n",sumOfPrimes(mang));
     }
 }
