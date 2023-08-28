@@ -23,17 +23,24 @@ public class Lec05Prac01 {
         }
         return mang;
     }
-    private static long findMinValue(long[] arr){
+    private static int findMinValuePosition(long[] arr){
         long min=arr[0];
-        //  
-        return min;
+        int viTri=10;
+        for(int i=1; i<arr.length; i+=1){
+            if (min>arr[i]){
+                min=arr[i];
+                viTri=i;
+            }
+        }
+        return viTri;
     }
     public static void main(String[] args) {
         int MAX=40;
         int N=10;
         long[] mang=initRandomArray(N, MAX);
         printElems(mang);
-        System.out.printf("Giá trị lớn nhất của mảng là: %d", findMaxValue(mang));
-        System.out.printf("Giá trị nhỏ nhất của mảng là: %d", findMinValue(mang));
+        System.out.printf("Giá trị lớn nhất của mảng là: %d\n", findMaxValue(mang));
+        int viTriMin=findMinValuePosition(mang);
+        System.out.printf("Giá trị nhỏ nhất của mảng là: %d tại vị trí: %d\n", mang[viTriMin], viTriMin);
     }
 }
