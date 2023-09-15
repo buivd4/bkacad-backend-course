@@ -3,9 +3,8 @@ public class Lec07Example {
         // Thuoc tinh
         private String tenSv, maSv, dcLienLac;
         int tuoi;
-        {
-            System.out.println("bat dau khoi tao mot Sinh Vien");
-        }
+        static int soLuongSv = 0;
+
         // Khoi tao
         SinhVien(){
             this.tenSv = "Default";
@@ -44,6 +43,11 @@ public class Lec07Example {
         SinhVien sv1 = new Lec07Example.SinhVien();
         SinhVien sv2 = new Lec07Example.SinhVien("Nguyen Van A", "MSV001", "Hanoi", 25);
         SinhVien sv3 = new Lec07Example.SinhVien("Nguyen Van A", "Hanoi", 25);
+
+        System.out.println(sv1.soLuongSv);
+        System.out.println(sv2.soLuongSv);
+        sv1.soLuongSv+=1;
+        System.out.println(sv2.soLuongSv);
 
         //String ten = sv1.getTen();
     }
