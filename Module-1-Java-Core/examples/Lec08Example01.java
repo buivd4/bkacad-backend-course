@@ -1,5 +1,5 @@
 package Lec08Example;
- 
+
 // Class to which the above package belongs
 public class Lec08Example01 {
  
@@ -19,4 +19,3 @@ public class Lec08Example01 {
         System.out.println("Hello");
     }
 }
-

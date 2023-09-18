@@ -1,5 +1,6 @@
-import Lec08Example.*;
- 
+import Lec08Example.Lec08Example01Ex;
+import Lec08Example.Lec08Example01;
+
 // Class to which the package belongs
 class Lec08Example01Use {
  
@@ -8,12 +9,13 @@ class Lec08Example01Use {
     {
  
         // Creating an object of Demo class
-        Lec08Example01 d = new Lec08Example01();
- 
+        Lec08Example01 father = new Lec08Example01();
+        Lec08Example01Ex child = new Lec08Example01Ex();
+
         // Calling the functions show() and view()
         // using the object of Demo class
-        d.show();
-        d.view();
+        father.show();
+        child.show();
     }
 }
 
