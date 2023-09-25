@@ -9,6 +9,7 @@ public class Lec09Prac {
         Hãy sử dụng tính chất đóng gói để bảo vệ dữ liệu và cung cấp các phương thức để truy xuất và cập nhật thông tin sách. */
         String id, name, author;
         Integer publishYear, amount;
+        static Integer totalKindOfBook=0;
 
         Book(String id,String name,String author,Integer publishYear,Integer amount){
             this.id=id;
@@ -16,6 +17,7 @@ public class Lec09Prac {
             this.author=author;
             this.publishYear=publishYear;
             this.amount=amount;
+            totalKindOfBook++;
         }
 
         void print(){
@@ -23,7 +25,7 @@ public class Lec09Prac {
         }
     }
 
-    static public class Person{
+    static public d=fiun class Person{
         /* Lớp Người Đọc chứa thông tin về mã đọc giả, tên đọc giả, tuổi, ngày tham gia thư viện. */ 
         /* Lớp Nhân Viên chứa thông tin về mã nhân viên, tên nhân viên, tuổi, chức vụ, ngày tham gia thư viện. */
 
@@ -159,19 +161,22 @@ public class Lec09Prac {
         Book[] books = {
             new Book("1", "Book 1", "Any",1990,3 ),
             new Book("2", "Book 2", "Bny",1992,10 ),
-            new Book("3", "Book 3", "Cny",1997,1 )
+            new Book("3", "Book 3", "Cny",1997,1 ),
+            new Book("4", "Book 4", "Sny",1997,1 )
         };
-        BookManager.books = books;
 
-        Staff maria = new Staff("S001","Maria" , Role.LIBARIAN, 25, new Date(1663855399));
+        System.out.println(books[0].totalKindOfBook);
+        // BookManager.books = books;
 
-        Reader john = new Reader("R001", "John", 27, new Date());
-        Reader dave = new Reader("R002", "Dave", 30, new Date());
+        // Staff maria = new Staff("S001","Maria" , Role.LIBARIAN, 25, new Date(1663855399));
 
-        BookBorrowCard[] cards = {
-            new BookBorrowCard(dave, maria, BookManager.books[BookManager.findBookById("2")], BBCState.BORROWING, new Date(), null, 5)
-        };
-        BookManager.cards = cards;
+        // Reader john = new Reader("R001", "John", 27, new Date());
+        // Reader dave = new Reader("R002", "Dave", 30, new Date());
+
+        // BookBorrowCard[] cards = {
+        //     new BookBorrowCard(dave, maria, BookManager.books[BookManager.findBookById("2")], BBCState.BORROWING, new Date(), null, 5)
+        // };
+        // BookManager.cards = cards;
 
         //System.out.println(BookManager.noOfAvailableBook("2"));
 
@@ -181,7 +186,7 @@ public class Lec09Prac {
         //     bbcCards[i].book.print();
         // }
         
-        BookManager.findOldestWaittingCard("2").borrower.print();
+        // BookManager.findOldestWaittingCard("2").borrower.print();
     
     }
 }
